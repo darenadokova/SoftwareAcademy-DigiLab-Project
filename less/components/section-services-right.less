@@ -1,0 +1,58 @@
+@import "var.less";
+
+.section-services-right {
+    background-image: url('https://preview.colorlib.com/theme/digilab/images/bg_3.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    overflow: hidden;
+
+    .section-services-right-wrapper {
+        margin-left: auto;
+        width: 90%;
+        @media screen and (min-width: @tablet){
+            width: auto;
+        }
+    }
+
+    .section-services-right-item {
+        background-color: @color-white-opacity-section;
+        padding: 30px 40px 30px 50px;
+        margin-bottom: 1px;
+        width: 130%;
+        transition: transform .3s ease-in-out;
+        position: relative;
+
+        @media screen and (min-width: @tablet){
+            width: 130%;
+
+            &:hover {
+                transform: translateX(-100px);
+                i {
+                    transform: translatey(-50%) rotate(180deg);
+                }
+            }
+        }
+        i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: @color-green;
+        }
+
+
+        h5 {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 24px;
+            font-weight: normal;
+            color: @color-green;
+        }
+
+        p {
+            margin-bottom: 0;
+            color: @color-black-p;
+        }
+    }
+}

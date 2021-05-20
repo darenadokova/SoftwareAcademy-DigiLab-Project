@@ -1,0 +1,124 @@
+@import "var.less";
+
+.section-intro {
+    background-image: url('https://preview.colorlib.com/theme/digilab/images/bg_1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-bottom: 30px;
+
+    @media screen and (min-width: @mobile){
+        padding-top: 70px;
+        padding-bottom: 70px;
+        }
+
+    @media screen and (min-width: @desktop){
+            background-image: none;
+            padding-top: 0;
+            position: initial;
+        }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        @media screen and (min-width: @desktop){
+            display: none;
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+        @media screen and (min-width: @desktop){
+            position: initial;
+        }
+    }
+
+    img {
+        display: none;
+        @media screen and (min-width: @desktop){
+            display: block;
+            position: absolute;
+            width: 50%;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .intro-content {
+        text-align: center;
+        @media screen and (min-width: @desktop){
+            text-align: left;
+            padding-right: 30px;
+        }
+    }
+
+    .intro-content-sub-title {
+        color: @color-green;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-top: 0;
+        padding-top: 15px;
+    }
+
+    h1 {
+        font-size: 40px;
+        color: @color-white;
+        font-weight: normal;
+        line-height: 1.4;
+        @media screen and (min-width: @desktop){
+            color: @color-black;
+            font-size: 44px;
+        }
+    }
+
+    .intro-content-desc {
+        color: @color-white-opacity;
+        font-size: 23px;
+        line-height: 1.5;
+        @media screen and (min-width: @desktop){
+            color: @color-black-opacity;
+            font-size: 20px;
+            margin-bottom: 45px;
+        }
+    }
+
+    a {
+        display: inline-block;
+    }
+
+    .intro-wrapper {
+
+        @media screen and (min-width: @desktop){
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .intro-title-vertical {
+            display: none;
+           
+
+            @media screen and (min-width: @desktop){
+                display: block;
+                color: @color-black-opacity;
+            text-transform: uppercase;
+            position: absolute;
+            left: -100px;
+            top: 50%;
+            transform: translateY(-50%) rotate(270deg);
+            letter-spacing: 4px;
+            }
+        }
+    }
+}
+
+.wrapper-offset-img {
+    position: relative;
+    overflow: hidden;
+}
